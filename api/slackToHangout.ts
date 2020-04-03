@@ -10,5 +10,5 @@ export default (req: NowRequest, res: NowResponse) => {
    * 3. get hangout room name from mapping, select by slack room name.
    * 4. send text to hangout room
    */
-  res.status(200).send({ responseText });
+  res.status(200).send({responseText, env: process.env.TEST_ENV});
 };

@@ -12,5 +12,5 @@ export default (req: NowRequest, res: NowResponse) => {
    * 3. get slack room name from mapping, select by hangout room name.
    * 4. send text to slack room name webhook
    */
-  res.status(200).send({responseText});
+  res.status(200).send({responseText, env: process.env.TEST_ENV});
 }
