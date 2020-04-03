@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "env": {
+    "TEST_ENV": "maman"
+  },
+  "routes": [
+    {
+      "src": "/webhook/hangout2slack",
+      "methods": ["POST"],
+      "dest": "/api/hangoutToSlack.ts"
+    },
+    {
+      "src": "/webhook/slack2hangout",
+      "methods": ["POST"],
+      "dest": "/api/slackToHangout.ts"
+    }
+  ],
+  "cleanUrls": true,
+  "regions": ["sin1"]
+}
