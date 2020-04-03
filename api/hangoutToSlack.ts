@@ -4,9 +4,6 @@ import {IHangoutEvent} from '../lib/hangout-types';
 export default (req: NowRequest, res: NowResponse) => {
   let responseText = "hello hangout!";
   const hangoutEvent: IHangoutEvent = req.body;
-  if (hangoutEvent.type === 'ADDED_TO_SPACE' && hangoutEvent.space.type === 'ROOM') {
-    // todo
-  }
   /**
    * 1. get text from hangout.
    * 2. get hangout room name.
