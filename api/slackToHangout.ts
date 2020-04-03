@@ -1,7 +1,7 @@
 import { NowRequest, NowResponse } from "@now/node";
 
 export default (req: NowRequest, res: NowResponse) => {
-  let responseText;
+  let responseText = 'hello slack!';
   /**
    * 1. get text from slack.
    * 2. get slack room name.

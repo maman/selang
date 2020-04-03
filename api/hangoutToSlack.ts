@@ -2,7 +2,7 @@ import {NowRequest, NowResponse} from '@now/node';
 import {IHangoutEvent} from '../lib/hangout-types';
 
 export default (req: NowRequest, res: NowResponse) => {
-  let responseText;
+  let responseText = "hello hangout!";
   const hangoutEvent: IHangoutEvent = req.body;
   if (hangoutEvent.type === 'ADDED_TO_SPACE' && hangoutEvent.space.type === 'ROOM') {
     // todo
