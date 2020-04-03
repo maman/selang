@@ -1,7 +1,9 @@
 import {NowRequest, NowResponse} from '@now/node';
+import Mapper from '../lib/Mapper';
 import {IHangoutEvent} from '../lib/hangout-types';
 
 export default (req: NowRequest, res: NowResponse) => {
+  const mapperInstance = new Mapper();
   let responseText = "hello hangout!";
   const hangoutEvent: IHangoutEvent = req.body;
   /**

@@ -1,7 +1,9 @@
 import { NowRequest, NowResponse } from "@now/node";
+import Mapper from '../lib/Mapper';
 
 export default (req: NowRequest, res: NowResponse) => {
-  let responseText = 'hello slack!';
+  const mapperInstance = new Mapper();
+  let responseText = 'hello slacks!';
   /**
    * 1. get text from slack.
    * 2. get slack room name.
